@@ -8,9 +8,7 @@ describe("Token", function () {
     const token = await Token.deploy();
     await token.deployed();
     expect(await token.balanceOf(token.address)).to.eq(0);
-
     const owner = await token.owner();
-
     expect(await token.balanceOf(owner)).to.eq(1000000);
   });
 
@@ -26,8 +24,6 @@ describe("Token", function () {
     await transferTx.wait();
     expect(await token.balanceOf(owner.address)).to.eq(1000000 - 100000);
     expect(await token.balanceOf(addr1.address)).to.eq(100000);
-
-    // console.log(accounts[0].address, accounts[1].address);
   });
 
   it("Should not transfer tokens", async function () {

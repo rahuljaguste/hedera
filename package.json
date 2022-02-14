@@ -2,6 +2,7 @@
   "name": "hedera",
   "version": "0.1.0",
   "private": true,
+  "module": "commonjs",
   "dependencies": {
     "@hashgraph/sdk": "^2.8.0",
     "@testing-library/jest-dom": "^5.16.2",
@@ -18,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:contract": "npx hardhat test"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +47,7 @@
     "dotenv": "^16.0.0",
     "ethereum-waffle": "^3.0.0",
     "ethers": "^5.0.0",
-    "hardhat": "^2.8.4"
+    "hardhat": "^2.8.4",
+    "mocha": "^9.2.0"
   }
 }
